@@ -43,7 +43,10 @@
 				<imagepath background="true">$INFO[Control.GetLabel(5785)]</imagepath>
 			</control>
 			<!-- Artist SlideShow -->
-			<control type="image">
+			
+			<!-- Disable original Artist Slideshow code -->
+			
+			<!-- control type="image">
 				<aspectratio>scale</aspectratio>
 				<include>FullscreenDimensions</include>
 				<fadetime>800</fadetime>
@@ -61,7 +64,30 @@
 				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
 				<visible>String.IsEmpty(Player.Art(artist.fanart))</visible>
+			</control -->
+			
+			<!-- Use code from Estuary for Artist Sliseshow -->
+			
+			<control type="image">
+				<aspectratio>scale</aspectratio>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<animation effect="fade" start="100" end="50" time="0" condition="Visualisation.Enabled">Conditional</animation>
+				<texture background="true">$INFO[Player.Art(fanart)]</texture>
+				<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
 			</control>
+			<control type="image">
+				<aspectratio>scale</aspectratio>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<animation effect="fade" start="100" end="50" time="0" condition="Visualisation.Enabled">Conditional</animation>
+				<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
+			</control>
+			
+			<!-- End of code from Estuary for Artist Sliseshow -->
+			
 			<control type="group">
 				<animation type="conditional" reversible="false" condition="true">
 					<effect type="rotatey" center="0,150" start="6" end="6" />
