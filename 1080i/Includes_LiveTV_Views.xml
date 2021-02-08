@@ -134,7 +134,8 @@
 						<visible>String.IsEqual(Skin.String(LiveTV.EpgViewChannels),2) + !String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="image">
-						<posx>70</posx>
+						<!-- posx changed from 70 -->
+						<posx>75</posx>
 						<posy>1</posy>
 						<width>200</width>
 						<height>58</height>
