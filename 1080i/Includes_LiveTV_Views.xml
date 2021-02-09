@@ -88,6 +88,95 @@
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<visible>String.IsEqual(Skin.String(LiveTV.EpgViewChannels),1) + !String.IsEmpty(ListItem.Icon)</visible>
 					</control>
+					<!-- Add Channel Icons for Live Football Streams -->
+					<!-- Channel Icon for Live EFL Championship-->
+					<control type="image">
+						<posx>75</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>58</height>
+						<aspectratio align="left">keep</aspectratio>
+						<bordersize>0</bordersize>
+						<texture>special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL C.png</texture>
+						<visible>String.Contains(ListItem.ChannelName,"ifollow") | String.Contains(ListItem.ChannelName,"LIVE EFL C")</visible>
+					</control>
+					<!-- Channel Icon for Live EPL -->
+					<control type="image">
+						<posx>75</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>58</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EPL.png</texture>
+						<visible>String.Contains(ListItem.ChannelName,"EPL Arena") | String.Contains(ListItem.ChannelName,"LIVE EPL")</visible>
+					</control>
+					<!-- Channel Icon for Live EFL League 1 -->
+					<control type="image">
+						<posx>75</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>58</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL L1.png</texture>
+						<visible>String.Contains(ListItem.ChannelName,"League One") | String.Contains(ListItem.ChannelName,"LIVE EFL L1")</visible>
+					</control>
+					<!-- Channel Icon for Live EFL League 2 -->
+					<control type="image">
+						<posx>75</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>58</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL L2.png</texture>
+						<visible>String.Contains(ListItem.ChannelName,"League Two") | String.Contains(ListItem.ChannelName,"LIVE EFL L2")</visible>
+					</control>
+					<!-- End of Add Channel Icons for Live Football Streams -->
+					<!-- Add Channel Resolution Icons -->
+					<control type="image">
+						<posx>285</posx>
+						<posy>10</posy>
+						<width>58.5</width>
+						<height>38</height>									
+						<texture>new_pvr/fhd.png</texture>
+						<visible>String.Contains(ListItem.ChannelName," FHD")</visible>
+						<align>center</align>
+						<aligny>center</aligny>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<posx>285</posx>
+						<posy>10</posy>
+						<width>47</width>
+						<height>38</height>									
+						<texture>new_pvr/hd.png</texture>
+						<visible>String.Contains(ListItem.ChannelName," HD")</visible>
+						<align>center</align>
+						<aligny>center</aligny>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<posx>285</posx>
+						<posy>10</posy>
+						<width>43</width>
+						<height>38</height>									
+						<texture>new_pvr/sd.png</texture>
+						<visible>String.Contains(ListItem.ChannelName," SD")</visible>
+						<align>center</align>
+						<aligny>center</aligny>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<!-- End of Add Channel Resolution Icons -->
+					<!-- "Has Archive" icon added -->
+					<control type="image">
+						<aspectratio align="right">keep</aspectratio>
+						<posx>350</posx>
+						<posy>17</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture>new_pvr/hasarchive.png</texture>
+						<visible>ListItem.HasArchive</visible>
+					</control>
+					<!-- End of "Has Archive" icon added -->
 				</channellayout>
 				<focusedchannellayout height="60" width="440">
 					<control type="image">
@@ -134,7 +223,8 @@
 						<visible>String.IsEqual(Skin.String(LiveTV.EpgViewChannels),2) + !String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="image">
-						<posx>70</posx>
+						<!-- posx changed from 70 -->
+						<posx>75</posx>
 						<posy>1</posy>
 						<width>200</width>
 						<height>58</height>
@@ -143,6 +233,95 @@
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<visible>String.IsEqual(Skin.String(LiveTV.EpgViewChannels),1) + !String.IsEmpty(ListItem.Icon)</visible>
 					</control>
+					<!-- Add Channel Icons for Live Football Streams -->
+					<!-- Channel Icon for Live EFL Championship-->
+					<control type="image">
+						<posx>75</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>58</height>
+						<aspectratio align="left">keep</aspectratio>
+						<bordersize>0</bordersize>
+						<texture>special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL C.png</texture>
+						<visible>String.Contains(ListItem.ChannelName,"ifollow") | String.Contains(ListItem.ChannelName,"LIVE EFL C")</visible>
+					</control>
+					<!-- Channel Icon for Live EPL -->
+					<control type="image">
+						<posx>75</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>58</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EPL.png</texture>
+						<visible>String.Contains(ListItem.ChannelName,"EPL Arena") | String.Contains(ListItem.ChannelName,"LIVE EPL")</visible>
+					</control>
+					<!-- Channel Icon for Live EFL League 1 -->
+					<control type="image">
+						<posx>75</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>58</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL L1.png</texture>
+						<visible>String.Contains(ListItem.ChannelName,"League One") | String.Contains(ListItem.ChannelName,"LIVE EFL L1")</visible>
+					</control>
+					<!-- Channel Icon for Live EFL League 2 -->
+					<control type="image">
+						<posx>75</posx>
+						<posy>1</posy>
+						<width>200</width>
+						<height>58</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>special://masterprofile/customisations\PVR\PVR Logo Pack - No Tags\LIVE EFL L2.png</texture>
+						<visible>String.Contains(ListItem.ChannelName,"League Two") | String.Contains(ListItem.ChannelName,"LIVE EFL L2")</visible>
+					</control>
+					<!-- End of Add Channel Icons for Live Football Streams -->
+					<!-- Add Channel Resolution Icons -->
+					<control type="image">
+						<posx>285</posx>
+						<posy>10</posy>
+						<width>58.5</width>
+						<height>38</height>									
+						<texture>new_pvr/fhd.png</texture>
+						<visible>String.Contains(ListItem.ChannelName," FHD")</visible>
+						<align>center</align>
+						<aligny>center</aligny>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<posx>285</posx>
+						<posy>10</posy>
+						<width>47</width>
+						<height>38</height>									
+						<texture>new_pvr/hd.png</texture>
+						<visible>String.Contains(ListItem.ChannelName," HD")</visible>
+						<align>center</align>
+						<aligny>center</aligny>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<posx>285</posx>
+						<posy>10</posy>
+						<width>43</width>
+						<height>38</height>									
+						<texture>new_pvr/sd.png</texture>
+						<visible>String.Contains(ListItem.ChannelName," SD")</visible>
+						<align>center</align>
+						<aligny>center</aligny>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<!-- End of Add Channel Resolution Icons -->
+					<!-- "Has Archive" icon added -->
+					<control type="image">
+						<aspectratio align="right">keep</aspectratio>
+						<posx>350</posx>
+						<posy>17</posy>
+						<width>24</width>
+						<height>24</height>
+						<texture>new_pvr/hasarchive.png</texture>
+						<visible>ListItem.HasArchive</visible>
+					</control>
+					<!-- End of "Has Archive" icon added -->
 				</focusedchannellayout>
 				<itemlayout height="60" width="120">
 					<control type="image" id="1">
@@ -197,8 +376,23 @@
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
+						<!-- Visible tag added -->
+						<visible>!String.IsEqual(ListItem.Label,"No Information available")</visible>
 						<animation effect="slide" start="0,0" end="40,0" time="0" tween="sine" easing="in" condition="[ListItem.HasTimer | ListItem.IsRecording]">Conditional</animation>
 					</control>
+					<!-- Display Channel Name for live football streams-->
+					<control type="label" id="1">
+						<width>120</width>
+						<height>60</height>
+						<font>font15</font>
+						<textoffsetx>15</textoffsetx>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
+						<visible>String.IsEqual(ListItem.Label,"No Information available")</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" tween="sine" easing="in" condition="[ListItem.HasTimer | ListItem.IsRecording]">Conditional</animation>
+					</control>				
+					<!-- End of Display Channel Name for live football streams-->
 				</itemlayout>
 				<focusedlayout height="60" width="120">
 					<control type="image" id="14">
@@ -235,8 +429,23 @@
 						<textoffsetx>15</textoffsetx>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
+						<!-- Visible tag added -->
+						<visible>!String.IsEqual(ListItem.Label,"No Information available")</visible>
 						<animation effect="slide" start="0,0" end="40,0" time="0" tween="sine" easing="in" condition="[ListItem.HasTimer | ListItem.IsRecording]">Conditional</animation>
 					</control>
+					<!-- Display Channel Name for live football streams-->
+					<control type="label" id="1">
+						<width>120</width>
+						<height>60</height>
+						<font>font15</font>
+						<textoffsetx>15</textoffsetx>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
+						<visible>String.IsEqual(ListItem.Label,"No Information available")</visible>
+						<animation effect="slide" start="0,0" end="40,0" time="0" tween="sine" easing="in" condition="[ListItem.HasTimer | ListItem.IsRecording]">Conditional</animation>
+					</control>				
+					<!-- End of Display Channel Name for live football streams-->
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
@@ -253,7 +462,8 @@
 				<onright>SetProperty(MediaMenu,True,home)</onright>
 				<onright>SetFocus(9050)</onright>
 			</control>
-			<control type="group">
+			<!-- Remove Channel Icon -->
+			<!-- control type="group">
 				<visible>Control.IsVisible(10) + !String.IsEmpty(ListItem.Icon)</visible>
 				<posx>83</posx>
 				<posy>617</posy>
@@ -266,7 +476,29 @@
 					<fadetime>400</fadetime>
 					<texture>$INFO[ListItem.Icon]</texture>
 				</control>
+			</control -->
+			<!-- Program Artwork and Small Video Window Added -->
+			<control type="group">
+				<posx>83</posx>
+				<posy>617</posy>
+				<control type="image">
+					<align>right</align>
+					<posx>75</posx>
+					<posy>30</posy>
+					<width>294</width>
+					<height>160</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="special://xbmc/media/banner.png">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</texture>
+					<visible>!Player.HasMedia</visible>
+				</control>
+				<control type="videowindow">
+					<posx>75</posx>
+					<posy>30</posy>
+					<width>294</width>
+					<height>160</height>
+				</control>   				
 			</control>
+			<!-- End of Program Artwork and Small Video Window -->
 			<control type="group">
 				<visible>Control.IsVisible(10)</visible>
 				<posx>522</posx>
@@ -279,7 +511,8 @@
 					<font>font15</font>
 					<textcolor>grey2</textcolor>
 					<textoffsetx>15</textoffsetx>
-					<label>[COLOR labelheader]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,: ][/COLOR]$INFO[ListItem.Title]     $INFO[ListItem.Genre,[COLOR labelheader]$LOCALIZE[515]:[/COLOR] ,]</label>
+					<!-- Remove Genre from Information -->
+					<label>[COLOR labelheader]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,: ][/COLOR]$INFO[ListItem.Title]     </label>
 				</control>
 				<control type="textbox" id="81">
 					<label>$INFO[ListItem.Plot]</label>
@@ -287,7 +520,8 @@
 					<posy>50</posy>
 					<width>1286</width>
 					<height>200</height>
-					<font>font15_textbox</font>
+					<!-- font changed from font15_textbox -->
+					<font>font12b</font>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<visible>![String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")]</visible>
 				</control>
@@ -296,7 +530,8 @@
 					<posy>50</posy>
 					<width>985</width>
 					<height>200</height>
-					<font>font15_textbox</font>
+					<!-- font changed from font15_textbox -->
+					<font>font12b</font>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<visible>[String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")]</visible>
