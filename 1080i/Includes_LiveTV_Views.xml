@@ -521,7 +521,7 @@
 					<width>1286</width>
 					<height>200</height>
 					<!-- font changed from font15_textbox -->
-					<font>font12b</font>
+					<font>Font_plot</font>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<visible>![String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")]</visible>
 				</control>
@@ -531,7 +531,7 @@
 					<width>985</width>
 					<height>200</height>
 					<!-- font changed from font15_textbox -->
-					<font>font12b</font>
+					<font>Font_plot</font>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<visible>[String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")]</visible>
