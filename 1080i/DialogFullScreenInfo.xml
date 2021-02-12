@@ -5,7 +5,8 @@
 	<!-- this switches back to "You are watching ..." -->
 	<onunload condition="VideoPlayer.Content(livetv) + !Skin.HasSetting(ToggleLiveTVNext)">Skin.ToggleSetting(ToggleLiveTVNext)</onunload>
 	<controls>
-		<control type="image">
+		<!-- Disable top background (PVR has its own) -->
+		<!-- control type="image">
 			<left>-10</left>
 			<top>-10</top>
 			<width>1950</width>
@@ -13,7 +14,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture background="true">black.png</texture>
 			<animation effect="fade" end="85" condition="true">Conditional</animation>
-		</control>
+		</control -->
 		<control type="button" id="64">
 			<include>HiddenObject</include>
 			<onclick condition="VideoPlayer.Content(livetv)">Skin.ToggleSetting(TogglePlotLiveTV)</onclick>
@@ -402,7 +403,8 @@
 			<control type="image">
 				<left>17</left>
 				<width>1885</width>
-				<height>720</height>
+				<!-- height changed from 720 -->
+				<height>300</height>
 				<texture border="40">dialogs/default/bg.png</texture>
 				<animation effect="fade" end="90" condition="true">Conditional</animation>
 				<visible>String.IsEmpty(VideoPlayer.PlotOutline) | String.IsEqual(VideoPlayer.PlotOutline,N/A) | Skin.HasSetting(Enable.LiveTVFullPlot)</visible>
@@ -444,13 +446,14 @@
 					<texture>new_pvr/osd_line_white.png</texture>
 					<colordiffuse>themecolor</colordiffuse>
 				</control>
-				<control type="label">
+				<!-- Disable Genre -->
+				<!-- control type="label">
 					<width>1000</width>
 					<height>30</height>
 					<label>$INFO[VideoPlayer.Genre,$LOCALIZE[515]: ]</label>
 					<font>font13</font>
 					<textcolor>grey</textcolor>
-				</control>
+				</control -->
 				<control type="textbox">
 					<width>1805</width>
 					<height>174</height>
@@ -461,11 +464,14 @@
 				</control>
 				<control type="textbox">
 					<width>1805</width>
-					<height>774</height>
+					<!-- height changed from 774 -->
+					<height>100</height>
 					<label>$INFO[VideoPlayer.Plot]</label>
-					<font>font15_textbox</font>
+					<!-- font changed from font15_textbox -->
+					<font>Font_plot</font>
 					<autoscroll delay="6000" time="3000" repeat="6000">true</autoscroll>
-					<visible>Skin.HasSetting(Enable.LiveTVFullPlot)</visible>
+					<!-- Disable visible tag to ensure plot in displayed -->
+					<!-- visible>Skin.HasSetting(Enable.LiveTVFullPlot)</visible -->
 				</control>
 				<!-- Plot only one line -->
 				<control type="textbox">
