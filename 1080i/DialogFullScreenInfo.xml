@@ -5,8 +5,7 @@
 	<!-- this switches back to "You are watching ..." -->
 	<onunload condition="VideoPlayer.Content(livetv) + !Skin.HasSetting(ToggleLiveTVNext)">Skin.ToggleSetting(ToggleLiveTVNext)</onunload>
 	<controls>
-		<!-- Disable top background (PVR has its own) -->
-		<!-- control type="image">
+		<control type="image">
 			<left>-10</left>
 			<top>-10</top>
 			<width>1950</width>
@@ -14,7 +13,9 @@
 			<aspectratio>stretch</aspectratio>
 			<texture background="true">black.png</texture>
 			<animation effect="fade" end="85" condition="true">Conditional</animation>
-		</control -->
+			<!-- Disable background if PVR playing -->
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+		</control>
 		<control type="button" id="64">
 			<include>HiddenObject</include>
 			<onclick condition="VideoPlayer.Content(livetv)">Skin.ToggleSetting(TogglePlotLiveTV)</onclick>
@@ -465,7 +466,7 @@
 				<control type="textbox">
 					<width>1805</width>
 					<!-- height changed from 774 -->
-					<height>100</height>
+					<height>105</height>
 					<label>$INFO[VideoPlayer.Plot]</label>
 					<!-- font changed from font15_textbox -->
 					<font>Font_plot</font>
