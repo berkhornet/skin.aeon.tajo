@@ -3,10 +3,10 @@
 	<controls>
 		<control type="group">
 			<control type="list" id="110">
-				<left>45</left>
-				<top>45</top>
+				<left>74</left>
+				<top>55</top>
 				<width>1830</width>
-				<height>450</height>
+				<height>454</height>
 				<onleft>110</onleft>
 				<onright>110</onright>
 				<onup>110</onup>
@@ -21,7 +21,63 @@
 						<textcolor>01ffffff</textcolor>
 						<align>center</align>
 						<selectedcolor>selected</selectedcolor>
-						<info>ListItem.Label</info>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="group">
+						<visible>Skin.HasSetting(ClassicLyrics) + !Skin.HasSetting(noLyrics)</visible>
+						<control type="label">
+							<left>2</left>
+							<top>0</top>
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>black</textcolor>
+						</control>
+						<control type="label">
+							<left>-1</left>
+							<top>0</top>
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>black</textcolor>
+						</control>
+						<control type="label">
+							<left>1</left>
+							<top>2</top>
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>black</textcolor>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>-1</top>
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>black</textcolor>
+						</control>
+						<control type="label">
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>FFE9F2F3</textcolor>
+						</control>
 					</control>
 				</itemlayout>
 				<focusedlayout height="50">
@@ -32,6 +88,62 @@
 						<align>center</align>
 						<textcolor>01ffffff</textcolor>
 						<label fallback="--">$INFO[ListItem.Label]</label>
+					</control>
+					<control type="group">
+						<visible>Skin.HasSetting(ClassicLyrics) + !Skin.HasSetting(noLyrics)</visible>
+						<control type="label">
+							<left>2</left>
+							<top>0</top>
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>black</textcolor>
+						</control>
+						<control type="label">
+							<left>-1</left>
+							<top>0</top>
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>black</textcolor>
+						</control>
+						<control type="label">
+							<left>1</left>
+							<top>2</top>
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>black</textcolor>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>-1</top>
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>black</textcolor>
+						</control>
+						<control type="label">
+							<width>1620</width>
+							<height>43</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>lyr0</font>
+							<align>left</align>
+							<aligny>top</aligny>
+							<textcolor>themecolor</textcolor>
+						</control>
 					</control>
 				</focusedlayout>
 			</control>
@@ -52,70 +164,6 @@
 				<visible>false</visible>
 			</control>
 		</control>
-		<include condition="!Skin.HasSetting(noLyrics) + String.IsEmpty(Window(home).Property(melodiesPlaying)) + Window.IsActive(visualisation)">Video_Lyrics</include>
-		<control type="group">
-			<animation effect="slide" end="0,0" start="0,-540" delay="100" time="200" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="list" id="120">
-				<left>45</left>
-				<top>45</top>
-				<width>1830</width>
-				<height>450</height>
-				<onup>120</onup>
-				<ondown>120</ondown>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
-				<itemlayout height="60" width="1282">
-					<control type="label">
-						<width>630</width>
-						<height>60</height>
-						<font>font14t</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<width>630</width>
-						<height>60</height>
-						<font>font14t</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="60" width="1282">
-					<control type="image">
-						<left>1</left>
-						<width>630</width>
-						<height>60</height>
-						<texture border="5">listselect_fo.png</texture>
-						<visible>Control.HasFocus(120)</visible>
-						<include>VisibleFadeAnimation</include>
-					</control>
-					<control type="label">
-						<width>630</width>
-						<height>60</height>
-						<font>font14t</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(120)">Conditional</animation>
-					</control>
-					<control type="label">
-						<width>630</width>
-						<height>60</height>
-						<font>font14t</font>
-						<textoffsetx>15</textoffsetx>
-						<textcolor>grey</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(120)">Conditional</animation>
-					</control>
-				</focusedlayout>
-			</control>
-		</control>
+		<include condition="String.IsEmpty(Window(home).Property(melodiesPlaying)) + Window.IsActive(visualisation)">Video_Lyrics</include>
 	</controls>
 </window>

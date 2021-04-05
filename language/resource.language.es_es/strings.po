@@ -7,14 +7,15 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Spanish (Spain) (http://www.transifex.com/projects/p/kodi-skins/language/es_ES/)\n"
+"PO-Revision-Date: 2021-03-27 23:13+0000\n"
+"Last-Translator: manfeed <manfuen@gmail.com>\n"
+"Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/es_es/>\n"
+"Language: es_es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 
 msgctxt "#31000"
 msgid "Directed by"
@@ -34,7 +35,7 @@ msgstr "Opciones de energía"
 
 msgctxt "#31004"
 msgid "Working"
-msgstr "Cargando..."
+msgstr "Cargando"
 
 msgctxt "#31005"
 msgid "Fixed"
@@ -374,7 +375,7 @@ msgstr "Muro de Pancartas"
 
 msgctxt "#31089"
 msgid "Play item on startup"
-msgstr "Reproducir elemento al inicio "
+msgstr "Reproducir elemento al inicio"
 
 msgctxt "#31090"
 msgid "Seconds"
@@ -748,9 +749,10 @@ msgctxt "#31183"
 msgid "Hide number of items in media views"
 msgstr "Oculta el número de elementos en vistas multimedia"
 
+# empty strings from id 31184 to 31199
 msgctxt "#31200"
-msgid "The Image Resource Select Add-on is used to choose a Kodi resource image pack similiar to weather artwork and icons."
-msgstr "El Add-on de Recursos de Imagen se usa para escoger entre packs de imágenes similares a los iconos y la meteorología."
+msgid "Is used to choose among different Kodi resource image pack to weather artwork and icons."
+msgstr "Se usa para escoger entre diferentes packs de imágenes de iconos y de la meteorología."
 
 msgctxt "#31205"
 msgid "Lyrics Source"
@@ -886,7 +888,7 @@ msgstr "[B]SETUP PROFILES[/B][CR][CR]Manejar perfiles de usuario · Habilitar pa
 
 msgctxt "#31409"
 msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
-msgstr "[B]Ajustar la configuración de TV[/B][CR][CR]Cambiar información de pantalla completa · Administrar la configuración de los datos de la EPG"
+msgstr "[B]Configura las opciones de TV[/B][CR][CR]Cambiar info pantalla completa · Especificar datos de guía EPG"
 
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
@@ -914,7 +916,7 @@ msgstr "Seleccione su perfil de usuario de Kodi[CR]para ingresar y continuar"
 
 msgctxt "#31427"
 msgid "Skin Shortcuts is responsible for handling all aspects of the main menu."
-msgstr "Enlaces de Skin es la responsable de manejar todos los aspectos del menú principal."
+msgstr "Sirve para personalizar todos los aspectos del menú principal."
 
 msgctxt "#31428"
 msgid "The Grab Fanart script provides the random fanart slideshows for the main menu."
@@ -922,7 +924,7 @@ msgstr "El script Grab Fanart provee de presentación de fanarts aleatorios para
 
 msgctxt "#31429"
 msgid "Library Data Provider is a service that runs in the background to provide library data for widgets and live backgrounds as well as playlist statistics for infolines."
-msgstr "Proveedor de Datos de Colección es un servicio que corre en segundo plano que dota de la información de la colección a los widgets, fondos así como estadísticas de las listas de reproducción."
+msgstr "Es un servicio que funciona en segundo plano y dota de información sobre la colección a los widgets, y también provee estadísticas de las listas de reproducción."
 
 msgctxt "#31430"
 msgid "Resource image addon for displaying the default white studio icons throughout the skin."
@@ -933,8 +935,8 @@ msgid "Resource image addon for displaying the default white recording label ico
 msgstr "Add-on de recursos de imagen para mostrar los iconos blancos de sello discográfico en la skin."
 
 msgctxt "#31432"
-msgid "Extended Info provides numerous Widget options from different sources (Trakt, TMDb) and extended cast and crew metadata."
-msgstr "Info Extendida provee numerosas opciones de Widget de distintos proveedores (Trakt, TMDb) y metadatos extendidos del reparto y equipo."
+msgid "Provides numerous Widget options and extended cast and crew metadata."
+msgstr "Provee numerosas opciones para los Widgets y metadatos extendidos del reparto y equipo."
 
 msgctxt "#31433"
 msgid "Skin Info Service is used to display movie set information throughout the skin."
@@ -946,15 +948,15 @@ msgstr "Check MP3 Theme comprueba si el usuario ha puesto un archivo theme.mp3 e
 
 msgctxt "#31450"
 msgid "  •  Open Settings "
-msgstr " • Abrir Ajustes "
+msgstr "  • Abrir Ajustes "
 
 msgctxt "#31451"
 msgid "  •  Click to Install"
-msgstr " • Pulsar para Instalar"
+msgstr "  • Pulsar para Instalar"
 
 msgctxt "#31473"
 msgid "Embuary Helper provides the data to display the cast for movies and tvshows."
-msgstr "Embuary Helper provee los datos necesarios para mostrar el reparto de actores en películas y series"
+msgstr "Provee los datos necesarios para mostrar el reparto de actores en películas y series."
 
 msgctxt "#31474"
 msgid "CU LRC Lyrics is used to download, sync, and display lyrics during fullscreen music playback."
@@ -962,19 +964,19 @@ msgstr "CU LRC Lyrics se usa para descargar, sincronizar y mostrar las letras mi
 
 msgctxt "#31475"
 msgid "Play Trailer makes possible to play movie trailers through a context menu. "
-msgstr "Play Trailer permite reproducir trailers de peliculas a través del menú de opciones."
+msgstr "Play Trailer permite reproducir trailers de películas a través del menú de opciones. "
 
 msgctxt "#31476"
-msgid "TV - Show Next Aired provides information of previous and next to air episodes in your library. It also provides a TV Guide for the next week or two."
-msgstr "TV - Show Next Aired da información del anterior y siguiente capítulo emitido en tu colección. También proporciona una GuiaTV de las siguientes semanas."
+msgid "Allows the use of Youtube to play trailers and other videos."
+msgstr "Permite el uso de Youtube para reproducir trailers y otros vídeos."
 
 msgctxt "#31477"
-msgid "Actor PNG's resource provides cast actor images to be shown in video views."
-msgstr "Actor PNG's resource provee imágenes de actores del reparto para mostrarse en las vistas de vídeo."
+msgid "Provides some cast actress images to be shown in video views."
+msgstr "Provee imágenes de algunas actrices del reparto para mostrarse en vistas de vídeo."
 
 msgctxt "#31478"
 msgid "Artist Slideshow is used to display artist fanart for both the home screen and during fullscreen music playback."
-msgstr "Presentación de Interprete se usa para mostrar fanart de los intérpretes en la pantalla principal y mientras se reproduce música."
+msgstr "Se usa para mostrar fanarts de los intérpretes en la pantalla principal y mientras se reproduce música."
 
 msgctxt "#31479"
 msgid "AutoCompletion provides suggestions to be selected while using the virtual keyboard."
@@ -1010,7 +1012,7 @@ msgstr "Borrar Grupo"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
-msgstr "Disponibles[CR]grupos"
+msgstr "Grupos[CR]Disponibles"
 
 msgctxt "#31511"
 msgid "Channel Options"
@@ -1118,7 +1120,7 @@ msgstr "Restablecer todos los valores a sus valores predeterminados."
 
 msgctxt "#31928"
 msgid "Aeon Tajo main menu layout"
-msgstr "Diiseño del menú principal de Aeon Tajo "
+msgstr "Diseño del menú principal de Aeon Tajo"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."
@@ -1182,7 +1184,7 @@ msgstr "Esto cambia el diseño de la vista de lista. Por defecto es un diseño d
 
 msgctxt "#31950"
 msgid "WEATHER"
-msgstr "TIEMPO"
+msgstr "CLIMA"
 
 msgctxt "#31951"
 msgid "PICTURES"
@@ -1194,7 +1196,7 @@ msgstr "TV EN VIVO"
 
 msgctxt "#31953"
 msgid "VIDEOS"
-msgstr "VIDEOS"
+msgstr "VÍDEOS"
 
 msgctxt "#31954"
 msgid "MOVIES"
@@ -1230,7 +1232,7 @@ msgstr "Ocultar calificaciones en la vista de Lista"
 
 msgctxt "#31962"
 msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
-msgstr "Esto cambia la visibilidad de las calificaciones en la vista de Lista, Lista Baja y Panel Triple, excepto si se ha ordenado por valoración."
+msgstr "Esto cambia la visibilidad de las valoraciones en la vista List, LowList y TriPanel, excepto si se ha ordenado por valoración."
 
 msgctxt "#31964"
 msgid "NoTo"
@@ -1242,7 +1244,7 @@ msgstr "Menu principal"
 
 msgctxt "#31966"
 msgid "Customize the main menu with widgets, backgrounds, submenus and statistics. Add your own custom main menu items."
-msgstr "Personaliza el menu principal con widgets, fondos, submenus y estadisticas. Añade tus propios elementos al menu principal"
+msgstr "Personaliza el menú principal con widgets, fondos, submenús y estadísticas. Añade tus propios elementos al menú principal."
 
 msgctxt "#31967"
 msgid "Skin addons"
@@ -1258,8 +1260,168 @@ msgstr "Otras opciones"
 
 msgctxt "#31970"
 msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/tvshows and other options."
-msgstr "Establece el uso de melodías para el menú principal, bandas sonoras (deben ser añadidas por el usuario) y del reparto de actores para películas y series, además de otras opciones"
+msgstr "Establece el uso de melodías para el menú principal, bandas sonoras (deben ser añadidas por el usuario) y del reparto de actores para películas y series, además de otras opciones."
 
 msgctxt "#31971"
 msgid "Color for items selected"
 msgstr "Color de los elementos seleccionados"
+
+msgctxt "#31972"
+msgid "Youtube"
+msgstr "Youtube"
+
+msgctxt "#31973"
+msgid "Down for more"
+msgstr "Bajar para ver más"
+
+msgctxt "#31974"
+msgid "More movies featuring"
+msgstr "Mas películas de"
+
+msgctxt "#31975"
+msgid "More tv shows featuring"
+msgstr "Mas series de"
+
+msgctxt "#31976"
+msgid "Image gallery"
+msgstr "Galería de imágenes"
+
+msgctxt "#31977"
+msgid "Years old"
+msgstr "Edad"
+
+msgctxt "#31978"
+msgid "Click for more"
+msgstr "Click para ver más"
+
+msgctxt "#31979"
+msgid "Left for more"
+msgstr "Izquierda para ver más"
+
+msgctxt "#31980"
+msgid "Right for more"
+msgstr "Derecha para ver más"
+
+msgctxt "#31981"
+msgid "Premiered"
+msgstr "Estreno"
+
+msgctxt "#31982"
+msgid "Budget"
+msgstr "Presupuesto"
+
+msgctxt "#31983"
+msgid "Revenue"
+msgstr "Ingresos"
+
+msgctxt "#31984"
+msgid "Awards"
+msgstr "Premios"
+
+msgctxt "#31985"
+msgid "Trending Movies"
+msgstr "Películas de moda"
+
+msgctxt "#31986"
+msgid "Upcoming Movies"
+msgstr "Próximos estrenos"
+
+msgctxt "#31987"
+msgid "Now Playing Movies"
+msgstr "Ahora en cines"
+
+msgctxt "#31988"
+msgid "Top Rated Movies"
+msgstr "Películas mas valoradas"
+
+msgctxt "#31989"
+msgid "Popular Movies"
+msgstr "Películas populares"
+
+msgctxt "#31990"
+msgid "Discover Movies"
+msgstr "Películas por descubrir"
+
+msgctxt "#31991"
+msgid "Trending Shows"
+msgstr "Series de moda"
+
+msgctxt "#31992"
+msgid "Top Rated Shows"
+msgstr "Series mas valoradas"
+
+msgctxt "#31993"
+msgid "Popular Shows"
+msgstr "Series populares"
+
+msgctxt "#31994"
+msgid "Discover Shows"
+msgstr "Series por descubrir"
+
+msgctxt "#31995"
+msgid "3D view"
+msgstr "Vista 3D"
+
+msgctxt "#31996"
+msgid "Extended view"
+msgstr "Vista extendida"
+
+msgctxt "#31997"
+msgid "Simple view"
+msgstr "Vista sencilla"
+
+msgctxt "#31998"
+msgid "Classic lyrics"
+msgstr "Formato clásico letras"
+
+msgctxt "#31999"
+msgid "Screensaver Netflix style in media views"
+msgstr "Salvapantallas estilo Netflix en vistas de música y vídeos"
+
+msgctxt "#32000"
+msgid "Displays a fullscreen slideshow of movies, tvshows or artists' fanarts (depending on the section the user is browsing) when 2 minutes go by in idle state inside a media view"
+msgstr "Inicia una presentación a pantalla completa de fanarts de películas, series o artistas (dependiendo de la sección en que uno se encuentre) cuando transcurren 2 minutos dentro de una vista de medios sin que el usuario intervenga"
+
+msgctxt "#32001"
+msgid "Play automatically movie trailers in video views"
+msgstr "Reproducir automáticamente trailers de películas en vistas de vídeo"
+
+msgctxt "#32002"
+msgid "Plays the movie trailer automatically in a window after some seconds when browsing through movie views"
+msgstr "Al navegar en las vistas de películas reproduce en una ventana el trailer de la película automáticamente al transcurrir unos segundos"
+
+msgctxt "#32003"
+msgid "All devices"
+msgstr "Todos los equipos"
+
+msgctxt "#32004"
+msgid "Powerful devices"
+msgstr "Equipos potentes"
+
+msgctxt "#32005"
+msgid "Most powerful devices"
+msgstr "Equipos más potentes"
+
+msgctxt "#32006"
+msgid " - Delay 5 seconds"
+msgstr " - Después de 5 segundos"
+
+msgctxt "#32007"
+msgid " - Delay 12 seconds"
+msgstr " - Después de 12 segundos"
+
+msgctxt "#32008"
+msgid "Info view 2"
+msgstr "Vista info 2"
+
+msgctxt "#32009"
+msgid "Info view 1"
+msgstr "Vista info 1"
+
+msgctxt "#32010"
+msgid "Play automatically songs while browsing music"
+msgstr "Reproducir automáticamente canciones al navegar en música"
+
+msgctxt "#32011"
+msgid "Plays automatically songs belonging to the current artist or album when browsing through music views"
+msgstr "Reproduce automáticamente canciones del artista o del album mientras se navega en algunas vistas de música"

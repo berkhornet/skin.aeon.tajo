@@ -11,7 +11,6 @@
 				<include condition="Window.IsActive(home)">LiveCasesBackground</include>
 				<include condition="Window.IsActive(videos) + !String.IsEmpty(Skin.String(VideoGenreFanartPath))">VideoGenreFanart</include>
 				<include condition="Window.IsActive(music) + !String.IsEmpty(Skin.String(MusicGenreFanartPath))">MusicGenreFanart</include>
-				<include condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">TVShowNextAiredBackground</include>
 				<include condition="Window.IsActive(weather)">WeatherBackground</include>
 				<include condition="Window.IsActive(script-globalsearch-main.xml)">GlobalSearchBG</include>
 				<include condition="Window.IsActive(service-LibreELEC-Settings-mainWindow.xml)">LibreELECBG</include>
@@ -21,7 +20,7 @@
 	</include>
 	<include name="BackgroundVideo">
 		<control type="group">
-			<visible>![[Control.IsVisible(52) | Control.IsVisible(53)] + String.IsEqual(Control.GetLabel(4420),1)]</visible>
+			<visible>!Control.IsVisible(587) + !Control.IsVisible(595) + !Control.IsVisible(596) + !Control.IsVisible(590) + !Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture>black.png</texture>
@@ -72,7 +71,7 @@
 			</content>
 		</control>
 		<control type="multiimage">
-			<visible>!Control.IsVisible(593)</visible>
+			<visible>!String.IsEqual(Container.Viewmode,Flix) + !String.IsEqual(Container.Viewmode,Fanart)</visible>
 			<description>Normal Default Background Image</description>
 			<include>FullscreenDimensions</include>
 			<imagepath fallback="special://skin/backgrounds/default_bg.jpg" background="true">$VAR[GlobalBackgroundVar]</imagepath>
@@ -117,19 +116,6 @@
 			<colordiffuse>CCFFFFFF</colordiffuse>
 			<texture background="true">back.png</texture>
 			<visible>[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] | [[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] + System.HasActiveModalDialog]</visible>
-		</control>
-	</include>
-	<include name="TVShowNextAiredBackground">
-		<control type="group">
-			<visible>!String.IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))</visible>
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<aspectratio>scale</aspectratio>
-				<texture background="true">$INFO[Container.ListItem.Property(Fanart)]</texture>
-				<fadetime>600</fadetime>
-				<animation effect="fade" time="600">Visible</animation>
-				<animation effect="fade" time="600">Hidden</animation>
-			</control>
 		</control>
 	</include>
 	<include name="WeatherBackground">

@@ -89,10 +89,10 @@
 			<!-- End of code from Estuary for Artist Sliseshow -->
 			
 			<control type="group">
-				<animation type="conditional" reversible="false" condition="true">
-					<effect type="rotatey" center="0,150" start="6" end="6" />
-					<effect type="zoom" center="0,200" start="93" end="93" />
-					<effect type="slide" end="0,-20" />
+				<animation type="conditional" reversible="false" condition="Skin.HasSetting(3D)">
+					<effect type="rotatey" center="0,150" start="6" end="6"/>
+					<effect type="zoom" center="0,200" start="93" end="93"/>
+					<effect type="slide" end="0,-20"/>
 				</animation>
 				<control type="image">
 					<animation effect="fade" end="60" condition="true">Conditional</animation>
@@ -116,23 +116,42 @@
 					<control type="group">
 						<left>760</left>
 						<top>150</top>
-						<control type="label">
+						<control type="grouplist">
 							<visible>!Skin.HasSetting(noTime)</visible>
-							<animation type="conditional" reversible="false" condition="true">
-								<effect type="rotatey" center="0,150" start="-6" end="-6" />
+							<animation type="conditional" reversible="false" condition="Skin.HasSetting(3D)">
+								<effect type="slide" end="2,10"/>
+								<effect type="rotate" center="auto" start="-2.5" end="-2.5"/>
 							</animation>
+							<left>-750</left>
+							<top>-670</top>
+							<width>400</width>
 							<align>left</align>
-							<left>-650</left>
-							<top>-620</top>
-							<width>105</width>
-							<height>40</height>
-							<textcolor>aaFFFFFF</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<font>Font_plot3</font>
-							<label>$INFO[System.Time(hh:mm)]</label>
+							<orientation>horizontal</orientation>
+							<itemgap>0</itemgap>
+							<control type="label">
+								<align>left</align>
+								<width min="20" max="200">auto</width>
+								<height>40</height>
+								<textcolor>grey2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<font>fontDiscog</font>
+								<label>$INFO[System.Time(hh)]</label>
+							</control>
+							<control type="label">
+								<align>left</align>
+								<width min="20" max="200">auto</width>
+								<height>34</height>
+								<textcolor>grey2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<font>Font_bro</font>
+								<label>:$INFO[System.Time(mm)]</label>
+							</control>
 						</control>
 						<control type="group">
 							<visible>!Skin.HasSetting(noLyrics)</visible>
+							<animation type="conditional" reversible="false" condition="!Skin.HasSetting(3D)">
+								<effect type="slide" end="-30,-48"/>
+							</animation>
 							<control type="label">
 								<left>-635</left>
 								<top>-90</top>
@@ -207,9 +226,8 @@
 							<width>1116</width>
 							<height>20</height>
 							<align>right</align>
-							<font>font30</font>
-							<label>$INFO[MusicPlayer.TrackNumber,,. ]$INFO[Player.Title,[COLOR white],[/COLOR]]</label>
-							<textcolor>themecolor</textcolor>
+							<font>font53</font>
+							<label>$INFO[MusicPlayer.TrackNumber,,. ]$INFO[Player.Title]</label>
 							<shadowcolor>black</shadowcolor>
 							<scroll>true</scroll>
 						</control>
@@ -220,9 +238,8 @@
 							<width>725</width>
 							<height>20</height>
 							<align>right</align>
-							<font>font30</font>
-							<label>$INFO[MusicPlayer.TrackNumber,,. ]$INFO[Player.Title,[COLOR white],[/COLOR]]</label>
-							<textcolor>themecolor</textcolor>
+							<font>font53</font>
+							<label>$INFO[MusicPlayer.TrackNumber,,. ]$INFO[Player.Title]</label>
 							<shadowcolor>black</shadowcolor>
 							<scroll>true</scroll>
 						</control>
@@ -234,7 +251,7 @@
 							<height>20</height>
 							<align>right</align>
 							<font>font30</font>
-							<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]: ,][COLOR themecolor]$INFO[MusicPlayer.Year, [,]][/COLOR]</label>
+							<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]: ,]$INFO[MusicPlayer.Year, (,)]</label>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<scroll>true</scroll>
@@ -248,7 +265,7 @@
 							<height>20</height>
 							<align>right</align>
 							<font>font30</font>
-							<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]: ,][COLOR themecolor]$INFO[MusicPlayer.Year, [,]][/COLOR]</label>
+							<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]: ,]$INFO[MusicPlayer.Year, (,)]</label>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<scroll>true</scroll>
@@ -256,6 +273,9 @@
 						</control>
 					</control>
 					<control type="group">
+						<animation type="conditional" reversible="false" condition="!Skin.HasSetting(3D)">
+							<effect type="slide" end="-40,-20"/>
+						</animation>
 						<left>760</left>
 						<top>150</top>
 						<control type="image">
@@ -285,19 +305,18 @@
 							<height>18</height>
 							<align>left</align>
 							<font>font30</font>
-							<label>[COLOR=white]$INFO[Player.Time][/COLOR]$INFO[Player.Duration, / [COLOR=white],[/COLOR] ]</label>
-							<textcolor>themecolor</textcolor>
+							<label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
 							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="label">
 							<left>-1</left>
 							<top>330</top>
-							<width>780</width>
+							<width>880</width>
 							<height>65</height>
 							<align>left</align>
 							<textcolor>themecolor</textcolor>
 							<shadowcolor>black</shadowcolor>
-							<font>Font_plot</font>
+							<font>font14t</font>
 							<scroll>true</scroll>
 							<scrollsuffix>  -  </scrollsuffix>
 							<label>[LOWERCASE][COLOR white]$INFO[MusicPlayer.Genre,, · ][/COLOR]$VAR[Spot_ify,,[COLOR white] ·[/COLOR]][COLOR white]$INFO[MusicPlayer.Bitrate, , [/COLOR]kbps[COLOR white] ·[/COLOR]][COLOR white]$INFO[MusicPlayer.BitsPerSample, ,[/COLOR] $LOCALIZE[612][COLOR white] ·[/COLOR]][/LOWERCASE][COLOR white]$INFO[MusicPlayer.Samplerate, ,[/COLOR]  kHz]</label>
@@ -314,9 +333,28 @@
 							<visible>!Player.IsInternetStream</visible>
 						</control>
 					</control>
+					<control type="group">
+						<visible>!Skin.HasSetting(3D)</visible>
+						<control type="image">
+							<left>70</left>
+							<top>36</top>
+							<width>480</width>
+							<height>480</height>
+							<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[MusicPlayer.Cover]</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<left>70</left>
+							<top>36</top>
+							<width>480</width>
+							<height>480</height>
+							<texture colordiffuse="ccFFFFFF" background="true">poster_bottom_fade.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+					</control>
 					<!--Disco 1-->
 					<control type="group">
-						<visible>!Skin.HasSetting(noCD)</visible>
+						<visible>!Skin.HasSetting(noCD) + Skin.HasSetting(3D)</visible>
 						<left>230</left>
 						<top>140</top>
 						<control type="group">
@@ -361,33 +399,34 @@
 						</control>
 					</control>
 					<control type="group">
+						<visible>Skin.HasSetting(3D)</visible>
 						<left>638</left>
 						<top>-115</top>
 						<animation effect="zoom" end="160" center="auto" condition="true">Conditional</animation>
 						<control type="group">
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,10) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-								<effect type="slide" end="-750,-10" time="1500" tween="sine" easing="in" />
+								<effect type="slide" end="-750,-10" time="1500" tween="sine" easing="in"/>
 							</animation>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,50) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-								<effect type="slide" end="-750,-10" time="1500" tween="sine" easing="in" />
+								<effect type="slide" end="-750,-10" time="1500" tween="sine" easing="in"/>
 							</animation>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,90) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-								<effect type="slide" end="-750,-10" time="1500" tween="sine" easing="in" />
+								<effect type="slide" end="-750,-10" time="1500" tween="sine" easing="in"/>
 							</animation>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,130) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-								<effect type="slide" end="-750,-10" time="1500" tween="sine" easing="in" />
+								<effect type="slide" end="-750,-10" time="1500" tween="sine" easing="in"/>
 							</animation>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,21) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-								<effect type="slide" end="750,10" time="1500" tween="sine" easing="out" />
+								<effect type="slide" end="750,10" time="1500" tween="sine" easing="out"/>
 							</animation>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,61) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-								<effect type="slide" end="750,10" time="1500" tween="sine" easing="out" />
+								<effect type="slide" end="750,10" time="1500" tween="sine" easing="out"/>
 							</animation>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,101) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-								<effect type="slide" end="750,10" time="1500" tween="sine" easing="out" />
+								<effect type="slide" end="750,10" time="1500" tween="sine" easing="out"/>
 							</animation>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,141) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-								<effect type="slide" end="750,10" time="1500" tween="sine" easing="out" />
+								<effect type="slide" end="750,10" time="1500" tween="sine" easing="out"/>
 							</animation>
 							<control type="image">
 								<left>-63</left>
@@ -480,32 +519,33 @@
 						</control>
 					</control>
 					<control type="group">
+						<visible>Skin.HasSetting(3D)</visible>
 						<left>-603</left>
 						<top>-1</top>
 						<animation effect="zoom" end="105" center="auto" condition="true">Conditional</animation>
 						<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,11) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-							<effect type="slide" end="750,-10" time="1500" tween="sine" easing="in" />
+							<effect type="slide" end="750,-10" time="1500" tween="sine" easing="in"/>
 						</animation>
 						<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,51) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-							<effect type="slide" end="750,-10" time="1500" tween="sine" easing="in" />
+							<effect type="slide" end="750,-10" time="1500" tween="sine" easing="in"/>
 						</animation>
 						<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,91) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-							<effect type="slide" end="750,-10" time="1500" tween="sine" easing="in" />
+							<effect type="slide" end="750,-10" time="1500" tween="sine" easing="in"/>
 						</animation>
 						<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,131) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-							<effect type="slide" end="750,-10" time="1500" tween="sine" easing="in" />
+							<effect type="slide" end="750,-10" time="1500" tween="sine" easing="in"/>
 						</animation>
 						<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,20) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-							<effect type="slide" end="-750,10" time="1500" tween="sine" easing="out" />
+							<effect type="slide" end="-750,10" time="1500" tween="sine" easing="out"/>
 						</animation>
 						<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,60) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-							<effect type="slide" end="-750,10" time="1500" tween="sine" easing="out" />
+							<effect type="slide" end="-750,10" time="1500" tween="sine" easing="out"/>
 						</animation>
 						<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,100) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-							<effect type="slide" end="-750,10" time="1500" tween="sine" easing="out" />
+							<effect type="slide" end="-750,10" time="1500" tween="sine" easing="out"/>
 						</animation>
 						<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,140) + !String.IsEmpty(Player.Art(album.back))" reversible="false">
-							<effect type="slide" end="-750,10" time="1500" tween="sine" easing="out" />
+							<effect type="slide" end="-750,10" time="1500" tween="sine" easing="out"/>
 						</animation>
 						<!--Trasera caja-->
 						<control type="group">
@@ -608,7 +648,7 @@
 					</control>
 					<!--Disco 2-->
 					<control type="group">
-						<visible>!Skin.HasSetting(noCD)</visible>
+						<visible>!Skin.HasSetting(noCD) + Skin.HasSetting(3D)</visible>
 						<left>230</left>
 						<top>140</top>
 						<control type="group">
@@ -618,7 +658,7 @@
 							<height>425</height>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,30)" reversible="false">
 								<include>musicv_disc</include>
-								<effect type="fade" start="0" end="100" delay="1000" time="1000" />
+								<effect type="fade" start="0" end="100" delay="1000" time="1000"/>
 							</animation>
 							<include>musicv_disc2</include>
 						</control>
@@ -629,7 +669,7 @@
 							<height>425</height>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,70)" reversible="false">
 								<include>musicv_disc</include>
-								<effect type="fade" start="0" end="100" delay="1000" time="1000" />
+								<effect type="fade" start="0" end="100" delay="1000" time="1000"/>
 							</animation>
 							<include>musicv_disc2</include>
 						</control>
@@ -640,7 +680,7 @@
 							<height>425</height>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,110)" reversible="false">
 								<include>musicv_disc</include>
-								<effect type="fade" start="0" end="100" delay="1000" time="1000" />
+								<effect type="fade" start="0" end="100" delay="1000" time="1000"/>
 							</animation>
 							<include>musicv_disc2</include>
 						</control>
@@ -651,14 +691,14 @@
 							<height>425</height>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,150)" reversible="false">
 								<include>musicv_disc</include>
-								<effect type="fade" start="0" end="100" delay="1000" time="1000" />
+								<effect type="fade" start="0" end="100" delay="1000" time="1000"/>
 							</animation>
 							<include>musicv_disc2</include>
 						</control>
 					</control>
 					<!--Disco reflejo-->
 					<control type="group">
-						<visible>!Skin.HasSetting(noCD)</visible>
+						<visible>!Skin.HasSetting(noCD) + Skin.HasSetting(3D)</visible>
 						<left>230</left>
 						<top>565</top>
 						<control type="group">
@@ -668,7 +708,7 @@
 							<height>425</height>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,30)" reversible="false">
 								<include>musicv_discr</include>
-								<effect type="fade" delay="800" start="0" end="100" time="500" />
+								<effect type="fade" delay="800" start="0" end="100" time="500"/>
 							</animation>
 							<include>musicv_disc2r</include>
 						</control>
@@ -679,7 +719,7 @@
 							<height>425</height>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,70)" reversible="false">
 								<include>musicv_discr</include>
-								<effect type="fade" start="0" end="100" delay="1000" time="1000" />
+								<effect type="fade" start="0" end="100" delay="1000" time="1000"/>
 							</animation>
 							<include>musicv_disc2r</include>
 						</control>
@@ -690,7 +730,7 @@
 							<height>425</height>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,110)" reversible="false">
 								<include>musicv_discr</include>
-								<effect type="fade" start="0" end="100" delay="1000" time="1000" />
+								<effect type="fade" start="0" end="100" delay="1000" time="1000"/>
 							</animation>
 							<include>musicv_disc2r</include>
 						</control>
@@ -701,7 +741,7 @@
 							<height>425</height>
 							<animation type="Conditional" condition="Integer.IsGreater(MusicPlayer.Time,150)" reversible="false">
 								<include>musicv_discr</include>
-								<effect type="fade" start="0" end="100" delay="1000" time="1000" />
+								<effect type="fade" start="0" end="100" delay="1000" time="1000"/>
 							</animation>
 							<include>musicv_disc2r</include>
 						</control>
@@ -768,45 +808,47 @@
 						</include>
 					</control>
 					<control type="group">
-						<visible>!Skin.HasSetting(nonexttracks_on)</visible>
-						<control type="label">
-							<left>1135</left>
-							<top>361</top>
-							<width>525</width>
-							<height>45</height>
-							<align>right</align>
-							<font>Font_plot</font>
-							<textcolor>themecolor</textcolor>
-							<label>$VAR[musicviz1]</label>
-							<shadowcolor>black</shadowcolor>
-							<scroll>false</scroll>
-							<scrollout>false</scrollout>
-						</control>
-						<control type="label">
-							<left>1046</left>
-							<top>400</top>
-							<width>612</width>
-							<height>45</height>
-							<align>right</align>
-							<font>Font_plot</font>
-							<label>$VAR[musicviz2]</label>
-							<textcolor>FFFFFFFF</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<scroll>false</scroll>
-							<scrollout>false</scrollout>
-						</control>
-						<control type="label">
-							<left>1046</left>
-							<top>434</top>
-							<width>612</width>
-							<height>45</height>
-							<align>right</align>
-							<font>Font_plot</font>
-							<label>$VAR[musicviz3]</label>
-							<shadowcolor>black</shadowcolor>
-							<textcolor>FFFFFFFF</textcolor>
-							<scroll>false</scroll>
-							<scrollout>false</scrollout>
+						<control type="group">
+							<top>-40</top>
+							<control type="label">
+								<left>1135</left>
+								<top>361</top>
+								<width>525</width>
+								<height>45</height>
+								<align>right</align>
+								<font>Font_plot</font>
+								<textcolor>themecolor</textcolor>
+								<label>$VAR[musicviz1]</label>
+								<shadowcolor>black</shadowcolor>
+								<scroll>false</scroll>
+								<scrollout>false</scrollout>
+							</control>
+							<control type="label">
+								<left>1046</left>
+								<top>400</top>
+								<width>612</width>
+								<height>45</height>
+								<align>right</align>
+								<font>Font_plot</font>
+								<label>$VAR[musicviz2]</label>
+								<textcolor>FFFFFFFF</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<scroll>false</scroll>
+								<scrollout>false</scrollout>
+							</control>
+							<control type="label">
+								<left>1046</left>
+								<top>434</top>
+								<width>612</width>
+								<height>45</height>
+								<align>right</align>
+								<font>Font_plot</font>
+								<label>$VAR[musicviz3]</label>
+								<shadowcolor>black</shadowcolor>
+								<textcolor>FFFFFFFF</textcolor>
+								<scroll>false</scroll>
+								<scrollout>false</scrollout>
+							</control>
 						</control>
 						<control type="image">
 							<left>1686</left>
@@ -814,7 +856,7 @@
 							<width>185</width>
 							<height>185</height>
 							<fadetime>700</fadetime>
-							<texture diffuse="tajo/mask_cover3.png" background="true">$VAR[musicviz4]</texture>
+							<texture colordiffuse="c1FFFFFF" diffuse="tajo/mask_cover3.png" background="true">$VAR[musicviz4]</texture>
 							<aspectratio align="left" aligny="top">scale</aspectratio>
 						</control>
 					</control>
