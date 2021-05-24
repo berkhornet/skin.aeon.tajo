@@ -83,7 +83,7 @@
 									<left>10</left>
 									<width>440</width>
 									<height>242</height>
-									<texture fallback="tajo/defaultalbumcover.png" diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+									<texture fallback="tajo/magazine/allartists.jpg" diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
 									<aspectratio align="center">scale</aspectratio>
 									<visible>!ListItem.IsParentFolder</visible>
 								</control>
@@ -144,7 +144,7 @@
 									<left>10</left>
 									<width>440</width>
 									<height>242</height>
-									<texture fallback="tajo/defaultalbumcover.png" diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+									<texture fallback="tajo/magazine/allartists.jpg" diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
 									<aspectratio align="center">scale</aspectratio>
 									<visible>!ListItem.IsParentFolder</visible>
 								</control>
@@ -364,8 +364,7 @@
 					<top>60</top>
 					<left>989</left>
 					<preloaditems>2</preloaditems>
-					<onright>SetProperty(MediaMenu,True,home)</onright>
-					<onright>SetFocus(9050)</onright>
+					<onright>5912</onright>
 					<onleft>5910</onleft>
 					<onup>5912</onup>
 					<ondown>5912</ondown>
@@ -469,7 +468,7 @@
 					<align>justify</align>
 					<label>$INFO[ListItem.Property(Artist_Description)]</label>
 					<visible>!String.IsEmpty(ListItem.Property(Artist_Description))</visible>
-					<autoscroll delay="6000" time="2000" repeat="6000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="6000" time="2000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				</control>
 				<control type="group">
 					<animation effect="slide" end="0,275" time="0" condition="String.IsEmpty(ListItem.Property(Artist_Description))">Conditional</animation>
@@ -482,7 +481,7 @@
 						<fadetime>200</fadetime>
 						<colordiffuse>BBffffff</colordiffuse>
 						<aspectratio aligny="bottom" align="left">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+						<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(clearart)]</texture>
 					</control>
 					<control type="group">
 						<left>85</left>
@@ -524,7 +523,7 @@
 							<align>right</align>
 							<font>titlewall</font>
 							<label>$VAR[value_title]</label>
-							<autoscroll delay="1500" time="2000" repeat="2000">!Skin.HasSetting(noallowscroll)</autoscroll>
+							<autoscroll delay="1500" time="2000" repeat="2000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</control>
@@ -656,10 +655,11 @@
 			</control>
 			<control type="scrollbar" id="80">
 				<include>ScrollBar_Vertical</include>
-				<left>-204</left>
-				<top>-5</top>
-				<height>1110</height>
-				<onleft>591</onleft>
+				<left>-2</left>
+				<top>58</top>
+				<height>995</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>SetFocus(9050)</onleft>
 				<onright>591</onright>
 				<visible allowhiddenfocus="true">Control.IsVisible(591) + Control.HasFocus(80)</visible>
 			</control>

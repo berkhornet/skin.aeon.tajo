@@ -30,10 +30,10 @@
 			</control>
 			<control type="videowindow" id="2549">
 				<visible>Integer.IsGreater(Player.Time,0) + Skin.HasSetting(playTrailer)</visible>
-				<left>80</left>
-				<top>53</top>
-				<width>530</width>
-				<height>300</height>
+				<left>150</left>
+				<top>-20</top>
+				<width>700</width>
+				<height>400</height>
 			</control>
 			<control type="textbox">
 				<animation effect="slide" end="-20,0" time="0" condition="!String.IsEmpty(ListItem.Art(characterart))">Conditional</animation>
@@ -52,6 +52,7 @@
 				<animation effect="slide" end="-20,0" time="0" condition="!String.IsEmpty(ListItem.Art(characterart))">Conditional</animation>
 				<visible>System.IdleTime(3) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 				<visible>!Container.Content(episodes)</visible>
+				<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3)">Conditional</animation>
 				<left>690</left>
 				<top>-317</top>
 				<control type="image">
@@ -1246,7 +1247,7 @@
 					<label>$VAR[audiochannelstajo4]</label>
 				</control>
 				<control type="image">
-					<width>80</width>
+					<width>64</width>
 					<height>67</height>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<texture>$VAR[audioc_4]</texture>
@@ -1269,7 +1270,7 @@
 					<label>$VAR[audiochannelstajo3]</label>
 				</control>
 				<control type="image">
-					<width>80</width>
+					<width>64</width>
 					<height>67</height>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<texture>$VAR[audioc_3]</texture>
@@ -1292,7 +1293,7 @@
 					<label>$VAR[audiochannelstajo2]</label>
 				</control>
 				<control type="image">
-					<width>80</width>
+					<width>64</width>
 					<height>67</height>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<texture>$VAR[audioc_2]</texture>
@@ -1315,7 +1316,7 @@
 					<label>$VAR[audiochannelstajo1]</label>
 				</control>
 				<control type="image">
-					<width>80</width>
+					<width>64</width>
 					<height>67</height>
 					<aspectratio aligny="center" align="center">keep</aspectratio>
 					<texture>$VAR[audioc_1]</texture>
@@ -1344,7 +1345,7 @@
 				<textcolor>FFFFFFFF</textcolor>
 				<selectedcolor>FFFFFFFF</selectedcolor>
 				<label>$VAR[value_plot]</label>
-				<autoscroll delay="4500" time="2000" repeat="4000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<autoscroll delay="4500" time="2000" repeat="4000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 			</control>
 			<control type="textbox">
 				<animation effect="slide" start="0,0" end="-55,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
@@ -1360,7 +1361,7 @@
 				<textcolor>FFFFFFFF</textcolor>
 				<selectedcolor>FFFFFFFF</selectedcolor>
 				<label>$VAR[value_plot]</label>
-				<autoscroll delay="5000" time="2000" repeat="5000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 			</control>
 			<control type="group">
 				<visible>Container.Content(episodes)</visible>
@@ -1463,7 +1464,7 @@
 					</control>
 					<control type="label">
 						<animation effect="slide" end="-50,0" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
-						<visible>Container.Content(artists) + System.IdleTime(3)</visible>
+						<visible>Container.Content(artists) + !String.StartsWith(ListItem.Label,*) + System.IdleTime(3)</visible>
 						<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 						<left>1660</left>
 						<top>180</top>
@@ -1488,7 +1489,7 @@
 						<font>font28c</font>
 						<align>justify</align>
 						<label>$INFO[ListItem.Property(Artist_Description)]</label>
-						<autoscroll delay="4000" time="2000" repeat="4000">!Skin.HasSetting(noallowscroll)</autoscroll>
+						<autoscroll delay="4000" time="2000" repeat="4000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 					</control>
 				</control>
 				<control type="list" id="5108">
@@ -1560,7 +1561,7 @@
 					<font>font28b</font>
 					<align>justify</align>
 					<label>$INFO[ListItem.Property(Album_Description)]</label>
-					<autoscroll delay="6000" time="2000" repeat="6000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="6000" time="2000" repeat="6000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				</control>
 				<control type="list" id="3647">
 					<visible>Container.Content(albums) + System.IdleTime(3) + !String.StartsWith(ListItem.Label,*)</visible>
@@ -1599,7 +1600,7 @@
 							<label>[LOWERCASE][CAPITALIZE]$INFO[ListItem.TrackNumber]. $INFO[ListItem.Label] $INFO[ListItem.Duration,(,)][/CAPITALIZE][/LOWERCASE]</label>
 						</control>
 					</focusedlayout>
-					<content target="music" sortby="track" sortorder="ascending">$INFO[Container(596).ListItem.DBID,musicdb://albums/,/]</content>
+					<content target="music" sortby="track" sortorder="ascending">$INFO[Container(596).ListItem.DBID,musicdb://albums/,/*]</content>
 				</control>
 				<control type="fixedlist" id="596">
 					<viewtype label="RightList">list</viewtype>
@@ -1896,7 +1897,7 @@
 					<control type="group">
 						<!--Portada-->
 						<visible>Control.HasFocus(596)</visible>
-						<animation type="Conditional" condition="System.IdleTime(4)" reversible="false">
+						<animation type="Conditional" condition="System.IdleTime(4) + !String.StartsWith(ListItem.Label,*)" reversible="false">
 							<effect type="slide" end="-750,-10" time="1200" tween="sine" easing="in"/>
 						</animation>
 						<left>150</left>
@@ -1905,7 +1906,7 @@
 					</control>
 					<control type="group">
 						<!--Portada 2-->
-						<visible>System.IdleTime(10) + Control.HasFocus(596) + !String.IsEmpty(ListItem.Art(discart))</visible>
+						<visible>System.IdleTime(10) + Control.HasFocus(596) + !String.IsEmpty(ListItem.Art(discart)) + !String.StartsWith(ListItem.Label,*)</visible>
 						<animation type="Visible" reversible="false">
 							<effect type="rotatey" center="216,0" start="180" end="0" time="800" tween="quadratic" easing="out"/>
 							<effect type="fade" delay="100" start="0" end="100" time="100"/>
@@ -1916,7 +1917,7 @@
 					</control>
 					<control type="group">
 						<!--Portada 2-->
-						<visible>System.IdleTime(10) + Control.HasFocus(596) + String.IsEmpty(ListItem.Art(discart))</visible>
+						<visible>System.IdleTime(10) + Control.HasFocus(596) + String.IsEmpty(ListItem.Art(discart)) + !String.StartsWith(ListItem.Label,*)</visible>
 						<animation type="Visible" reversible="false">
 							<effect type="slide" delay="1300" start="-750,-10" end="0,0" time="1200" tween="sine" easing="out"/>
 						</animation>
@@ -1936,7 +1937,7 @@
 					<!--Trasera caja-->
 					<left>130</left>
 					<top>375</top>
-					<visible>System.IdleTime(4) + !System.IdleTime(11) + Control.HasFocus(596)</visible>
+					<visible>System.IdleTime(4) + !System.IdleTime(11) + Control.HasFocus(596) + !String.StartsWith(ListItem.Label,*)</visible>
 					<animation type="Visible" reversible="false">
 						<effect type="slide" delay="1300" start="-750,-10" end="0,0" time="1200" tween="sine" easing="out"/>
 					</animation>
@@ -2426,7 +2427,7 @@
 					<!--Trasera caja reflejo-->
 					<left>129</left>
 					<top>368</top>
-					<visible>System.IdleTime(4) + !System.IdleTime(11) + Control.HasFocus(596)</visible>
+					<visible>System.IdleTime(4) + !System.IdleTime(11) + Control.HasFocus(596) + !String.StartsWith(ListItem.Label,*)</visible>
 					<animation type="Visible" reversible="false">
 						<effect type="slide" delay="1300" start="-750,-10" end="0,0" time="1200" tween="sine" easing="out"/>
 					</animation>
@@ -2789,7 +2790,7 @@
 					<height>200</height>
 					<colordiffuse>cdffffff</colordiffuse>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(artist.clearart)]</texture>
+					<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(artist.clearart)]</texture>
 				</control>
 				<control type="image">
 					<visible>Control.IsVisible(596) + [Container.Content(albums) | Container.Content(songs)] + String.IsEmpty(ListItem.Art(artist.clearart))</visible>
@@ -2808,7 +2809,7 @@
 					<height>200</height>
 					<colordiffuse>cdffffff</colordiffuse>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+					<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(clearart)]</texture>
 				</control>
 			</control>
 			<control type="scrollbar" id="80">
