@@ -401,14 +401,15 @@
 						<animation effect="slide" start="0,0" end="40,0" time="0" tween="sine" easing="in" condition="[ListItem.HasTimer | ListItem.IsRecording]">Conditional</animation>
 					</control>
 
-					<control type="image">
+					<!-- Disable "Is Playable" icon as "Has Archive" icon used instead -->
+					<!-- control type="image">
 						<left>2</left>
 						<top>2</top>
 						<width>8</width>
 						<height>9</height>
 						<texture>blue.jpg</texture>
 						<visible>ListItem.IsPlayable</visible>
-					</control>
+					</control -->
 
 					<!-- Display Channel Name for live football streams-->
 					<control type="label" id="1">
