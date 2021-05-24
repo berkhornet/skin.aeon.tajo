@@ -453,14 +453,15 @@
 							<label></label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						<control type="image">
+						<!-- Disable "Is Playable" icon as "Has Archive" icon used instead -->
+						<!-- control type="image">
 							<left>2</left>
 							<top>2</top>
 							<width>8</width>
 							<height>8</height>
 							<texture>blue.jpg</texture>
 							<visible>ListItem.IsPlayable</visible>
-						</control>
+						</control -->
 					</control>
 					<control type="label" id="1">
 						<width>120</width>
