@@ -179,6 +179,34 @@
 				<onclick>ActivateWindow(favourites)</onclick>
 				<label>1036</label>
 			</control>
+			<!-- Add "Addon Browser" Button to Power Menu -->
+			<control type="button" id="16">
+				<description>Addon Browser</description>
+				<align>center</align>
+				<width>510</width>
+				<height>60</height>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<texturefocus border="35,2,35,2">button_shutdown_focus.png</texturefocus>
+				<onclick>ActivateWindow(10040)</onclick>
+				<label>Addon Browser</label>
+			</control>
+			<!-- End of Add "Addon Browser" Button to Power Menu -->	
+
+			<!-- Add "Reload Skin" Button to Power Menu -->
+			<control type="button" id="17">
+				<description>Reload Skin</description>
+				<align>center</align>
+				<width>510</width>
+				<height>60</height>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<texturefocus border="35,2,35,2">button_shutdown_focus.png</texturefocus>
+				<onclick>ReloadSkin()</onclick>
+				<label>Reload Skin</label>
+			</control>
+			<!-- End of Add "Addon Browser" Button to Power Menu -->	
+
 		</control>
 	</controls>
 </window>
